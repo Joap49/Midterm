@@ -19,14 +19,14 @@ body{
     ". header header header header header header ."
     ". subheader subheader subheader subheader subheader subheader subheader"
     ". mainbody mainbody mainbody mainbody feed feed ."
-    ". footer footer footer footer footer footer .";
+    ". footer footer footer footer footer footer scrollup";
 }
 
 .header{
   display: flex;
   font-family: 'Libre Caslon Display', serif;
   font-size: 2.5em;
-  text-shadow: rgba(245,245,245,0,0.5) 3px 5px 1px;
+  /* text-shadow: rgba(245,245,245,0,0.5) 3px 5px 1px; */
   grid-area: header;
   /* grid-column-start: 2; */
   /* grid-column-end: 7; */
@@ -120,6 +120,12 @@ h2{
 
 h3{
   color: #000;
+  font-family: 'Libre Caslon Display', serif;
+  font-size: 2em;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
 }
 
 .articleImage{
@@ -188,6 +194,15 @@ a:active{
 
 }
 
+.scrollup{
+  grid-area: scrollup;
+
+}
+
+.scrollupImage{
+  width: 30%;
+
+}
 a.footerlink{
   color: #A7A8AA;
 }
