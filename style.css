@@ -40,6 +40,7 @@ body{
   flex: 2 0 0;
 }
 
+
 .nav{
   display: flex;
   justify-content: space-between;
@@ -208,4 +209,213 @@ a.footerlink{
 }
 a.footerlink:hover{
 	color: #B899E8;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .mainContainer{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /*how many columns then how big*/
+    grid-template-rows: auto;
+    grid-column-gap: 2.5vmin;
+    grid-row-gap: 3vmin;
+    grid-template-areas:
+      "header header header header header header header header"
+      ". subheader subheader subheader subheader subheader subheader subheader"
+      "mainbody mainbody mainbody mainbody mainbody mainbody mainbody mainbody"
+      "feed feed feed feed feed feed feed feed"
+      ". footer footer footer footer footer footer scrollup";
+  }
+
+  .header{
+    display: flex;
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 2.5em;
+    /* text-shadow: rgba(245,245,245,0,0.5) 3px 5px 1px; */
+    grid-area: header;
+    /* grid-column-start: 2; */
+    /* grid-column-end: 7; */
+    border-bottom: 1px solid black;
+  }
+
+  .title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 2 0 0;
+  }
+
+
+  .nav{
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+    font-family: 'Poppins', sans-serif;
+    font-size: .2em;
+    line-height: 1px;
+    height: 20%;
+  }
+
+}
+
+  .nav > p{
+    padding: 0px 10px; /*  gives spacing between each link */
+  }
+
+  .subheader{
+    grid-area: subheader;
+    font-family: 'Poppins', sans-serif;
+    font-size: .8em;
+    /* grid-column-start: 2; */
+    padding: -0px;
+  }
+
+  .nav-bar{
+    grid-area: nav-bar;
+    font-family: 'Poppins', sans-serif;
+    font-size: .5em;
+    line-height: 1.5px;
+    border-bottom: 1px solid black;
+  }
+
+  .mainbody{
+    font-family: 'Poppins', sans-serif;
+    font-size: .4em;
+    grid-area: mainbody;
+    /* grid-column-start: 2; */
+    /* grid-column-end: 3; */
+    /* overflow: hidden; */
+    /* min-width: 0; */
+  }
+
+  .mainbody + p {
+    color: #ffffff;
+  }
+
+  .Readmore{
+    color: black;
+    text-decoration: underline;
+  }
+
+  .feed{
+    /* display: none; */
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: .5em;
+    grid-area: feed;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+
+  }
+
+  .indent{
+    text-indent: 2em;
+  }
+
+  .p-color{
+    color: #53565a;
+    letter-spacing: .8px;
+    line-height: 20px;
+  }
+
+  h2{
+    font-size: 1em;
+  }
+
+  h3{
+    color: #000;
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 2em;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .articleImage{
+    width: 100%;
+    /* width: 27.5vw; */
+    /* height: 47.5vh; */
+  }
+
+  .articleImage:hover{
+    filter: opacity(70%);
+  }
+
+  .mainImage{
+    width: 100%;
+  }
+
+  .mainImage:hover{
+    filter: opacity(70%);
+  }
+
+  li a{
+    text-decoration: none;
+  }
+
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:visited{
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: #B899E8;
+  }
+
+  a:active{
+    color: #B899E8;
+  }
+
+
+
+
+  .home:active{
+    color: #6B58A3;
+  }
+
+  .footer{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: .5em;
+    color: #a7a2c3;
+    grid-area: footer;
+    /* grid-column-start: 2; */
+    /* grid-column-end: 7; */
+    padding-top: 3vh;
+    padding-bottom: 8vh;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid black;
+
+  }
+
+  .scrollup{
+    grid-area: scrollup;
+
+  }
+
+  .scrollupImage{
+    width: 30%;
+
+  }
+  a.footerlink{
+    color: #A7A8AA;
+  }
+  a.footerlink:hover{
+    color: #B899E8;
+  }
+
+
 }
